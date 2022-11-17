@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <script>
+const Texts = [
+'HTML', 'CSS', 'JAVASCRIPT',
+'SQL', 'FLASK', 'REACT',
+'PYTHON', 'SOLANA',
+'DJANGO', 'NODEJS', 'ARDUINO',
+'EXPRESS', 'SQLITE', 'JQUERY'
+];
+
+var tagCloud = TagCloud('.Sphere', Texts, {
+
+// Sphere radius in px
+radius: 230,
+
+// animation speed
+// slow, normal, fast
+maxSpeed: 'fast',
+initSpeed: 'fast',
+
+// Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
+direction: 135,
+
+// interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
+keep: true
+
+});
+
+// Giving color to each text in sphere
+var color = '#FF5733 ';
+document.querySelector('.Sphere').style.color = color;
+</script>
+
+<styles>
+  .emphasized { 
+    font-style: italic; 
+  text-decoration: underline;
+    font-weight: bold
+  }
+  
+  .emph_2{
+    font-style:italic;
+    font-weight: bold
+  }
+  
+  
+   /* Applying CSS to sphere */
+  .tagcloud {
+    display: inline-block;
+    top: 100px;
+    left: 32%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+  }
+  
+  /* Change color of each text in sphere on hover   */
+  .tagcloud--item:hover {
+    color: #FFC300 ;
+  }
+  
+  /* .leftpane{
+      width: 25%;
+      min-width: 350px;
+      height: available;
+      min-height: 400px;
+      float: left;
+  /*     background-color: rosybrown; */
+      border-collapse: collapse;
+  } */
+  
+  .why{
+  box-sizing: border-box;
+  
+  position: absolute;
+  height: 860px;
+  left: 640px;
+  right: 0px;
+  top: 0px;
+  
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+   */
+</styles>
+</html>
